@@ -1,0 +1,173 @@
+body {
+    text-align: center;
+    background-color: pink;
+    font-family: 'Berkshire Swash', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1.title {
+    font-size: 36px;
+    color: red;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Heart GIF next to text */
+.heart-next-to-text {
+    width: 100px; /* Adjust the size */
+    height: auto;
+    margin-left: 10px;
+}
+
+/* Decorations - 6 Hearts */
+
+.heart {
+    width: 80px;
+    height: auto;
+    position: absolute;
+}
+
+/* Top Hearts */
+.heart.top-left {
+    top: 40px;
+    left: 80px;
+    width: 200px;
+    
+}
+
+.heart.top-right {
+    top: 40px;
+    right: 80px;
+    width: 200px;
+}
+
+/* Center Heart */
+.heart.center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+/* Extra Small Heart */
+.heart.extra {
+    top: 80px;
+    right: 50px;
+    width: 200px;
+}
+
+/* Bottom Left & Bottom Right GIFs */
+.heart.bottom-left {
+    bottom: 50px;
+    left: 100px;
+    width: 200px;
+}
+
+.heart.bottom-right {
+    bottom: 50px;
+    right: 100px;
+    width: 200px;
+}
+
+/* GIF Section */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.gif {
+    width: 230px;
+    height: 184px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Choices Section */
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 40px;
+    align-items: center;
+    z-index: 2;
+}
+
+.yes-container, .no-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* YES Circle */
+.yes-circle {
+    position: absolute;
+    width: 240px;
+    height: auto;
+    left: -50px;
+    top: -50px;
+}
+
+/* Buttons */
+.yes, .no {
+    font-size: 32px;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    z-index: 3;
+    position: relative;
+}
+
+.yes {
+    background-color: transparent;
+    color: black;
+}
+
+.no {
+    background-color: transparent;
+    color: black;
+}
+
+/* Emoji GIFs */
+.yes-emoji, .no-emoji {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+.smile-text {
+    font-size: 90px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-family: 'Berkshire Swash', cursive;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
